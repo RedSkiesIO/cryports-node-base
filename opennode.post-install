@@ -1,0 +1,20 @@
+#!/bin/sh
+
+simlink () {
+test "$(readlink "${1}")";
+}
+
+CRYPTOPLUSPLUS=/usr/include/crypto++
+CRYPTOPP=/usr/lib/libcryptopp.so.5.6
+
+if simlink "${CRYPTOPLUSPLUS}"; then
+    echo 'crypto++ symlink exists'
+else
+    ln -s /usr/include/cryptopp /usr/include/crypto++
+fi
+
+if simlink "${CRYPTOPP}"; then
+    echo 'libcryptopp.so.5.6 symlink exists'
+else
+    ln -s /usr/lib/libcryptopp.so /usr/lib/libcryptopp.so.5.6
+fi
