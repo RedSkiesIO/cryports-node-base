@@ -1,6 +1,6 @@
 # Contributor: James Kirby <james.kirby@atlascityfinace.com>
 # Maintainer: James Kirby <james.kirby@atlascityfinace.com>
-pkgname=opennode
+pkgname=opennode-base
 pkgver=0.0.1
 pkgrel=1
 pkgdesc="Blockchain managment package"
