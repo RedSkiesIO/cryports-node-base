@@ -1,0 +1,9 @@
+build-master:
+  stage: build
+  script:
+    - make dbuild-cryptos-openode-base-x8664
+    - make dbuild-cryptos-openode-base-armhf
+    - make dbuild-cryptos-openode-base-aarch64
+    - make dbuild-cryptos-openode-base-noarch
+  only:
+    - master
